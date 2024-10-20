@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="[ blog-list ] [ full-width ] [ region ]">
+  <h2>Blog Posts</h2>
+  <ul>
+    {{ range .Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  <div class="pagination">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</section>
+{{ end }}

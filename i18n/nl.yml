@@ -1,0 +1,17 @@
+menu: Menu
+home: Home
+pageNotFound: Pagina niet gevonden
+toHomepage: Keer terug naar de hoofdpagina
+closeTitle: Sluiten
+zoomTitle: Zoom
+arrowPrevTitle: Vorige
+arrowNextTitle: Volgende
+errorMsg: De foto kan niet worden geladen
+downloadTitle: Download
+relatedAlbums: Gerelateerde albums
+photoCount:
+  one: 1 photo
+  other: "{{ . }} fotos"
+albumCount:
+  one: "{{ .photoCount }} in {{ .count }} album"
+  other: "{{ .photoCount }} in {{ .count }} albums"

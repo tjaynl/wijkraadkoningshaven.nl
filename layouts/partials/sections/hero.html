@@ -1,0 +1,9 @@
+{{ if .enabled }}
+<section class="[ hero ] [ full full-width-split-screen ] []">
+    <div class=" [ flow ]">
+        <h1>{{ .content.title }}</h1>
+        <p>{{ .content.description }}</p>
+    </div>
+    <img src="{{ .content.image }}" alt="">
+</section>
+{{ end }}

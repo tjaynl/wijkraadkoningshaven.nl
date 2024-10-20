@@ -1,0 +1,14 @@
+enabled: true
+id: "about"
+
+content:
+  title: Over Wijkraad Koningshaven
+  description: Wij zijn een stichting
+  body: >
+    De stichting heeft als doel om het bevorderen van het welzijn van bewoners van de wijken Broekhoven 1, Fatima en Hoogvenne in de ruimste zin van het woord. Zij richt haar aandacht in het bijzonder op groepen/categorieën of personen die zich in achterstandsituaties bevinden of dreigen te geraken.
+
+  list:
+    - item: De problemen van wonen en woonomgeving en de ontwikkeling van Volkshuisvesting, Ruimtelijke Ordening en Milieu.
+    - item: De mogelijkheid tot bewustwording en ontplooiing van bewoners in sociaal-culturele opzicht door onderwijs, volwasseneducatie en vorming (sociale-culturele activiteiten).
+    - item: De hulpverlening, volksgezondheidsvraagstukken en vormen van zelfhulp.
+    - item: Recreatieve- en creatieve activiteiten/voorzieningen. Vraagstukken van de samenleving en de ontwikkeling daarvan in klein en groot verband.

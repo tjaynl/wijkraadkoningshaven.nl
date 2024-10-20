@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+.card {
+    --_card-foreground: var(--card-foreground, #{$card-foreground});
+    --_card-background: var(--card-background, #{$card-background});
+    --_card-padding: var(--card-padding, #{$card-padding});
+    --_card-shadow: var(--card-shadow, #{$card-shadow});
+    --_card-border-radius: var(--card-border-radius, #{$card-border-radius});
+
+    display: grid;
+    gap: var(--flow-space);
+    overflow: clip;
+    box-shadow: var(--_card-shadow);
+    border-radius: var(--_card-border-radius);
+
+    figure,
+    .card__image {
+        border-radius: var(--_card-border-radius);
+        overflow: clip;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    div,
+    .card__content {
+        padding: var(--_card-padding);
+    }
+}

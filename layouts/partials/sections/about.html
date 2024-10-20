@@ -1,0 +1,14 @@
+{{ if .enabled }}
+<section class="[ about ] [ full-width flow region ] [ bgcolor-neutral-50 ]">
+    <h2>{{ .content.title }}</h2>
+    <p>{{ .content.description }}</p>
+    <div class="flow">
+        {{ .content.body | markdownify }}
+    </div>
+    <ul>
+        {{ range .content.list }}
+            <li>{{ .item }}</li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

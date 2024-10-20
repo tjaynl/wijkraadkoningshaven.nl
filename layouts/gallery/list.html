@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <section class="[ galleries ] [ full-width ] [ region ]">
+    <div class="grid-auto-fit">
+        {{ range where .Pages "Params.private" "ne" true }}
+          {{ partial "components/album-card.html" . }}
+        {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,26 @@
+baseURL: https://wijkraadkoningshaven.nl
+languageCode: nl
+title: Wijkraad Koningshaven
+timeZone: "Europe/Amsterdam"
+timeout: 120s
+enableRobotsTXT: true
+
+permalinks:
+  nieuws: "/nieuws/:year/:slug/"
+  gallery: "/gallery/:filename/"
+
+params:
+  sitenav:
+    - title: Home
+      url: "/"
+    - title: Over ons
+      url: "/about"
+    - title: Nieuws
+      url: "/nieuws/"
+    - title: Evenementen
+      url: "/events/"
+    - title: Media
+      url: "/gallery/"
+    - title: Verrijk je wijk
+      url: "/verrijk-je-wijk"
+      button: true

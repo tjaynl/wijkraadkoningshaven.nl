@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="events-list">
+  <h1>Upcoming Events</h1>
+  {{ range .Pages.ByParam "event_date" }}
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.event_date }}
+        <time datetime="{{ . }}">{{ . | dateFormat "January 2, 2006" }}</time>
+      {{ end }}
+      <p>{{ .Summary }}</p>
+    </article>
+  {{ end }}
+</section>
+{{ end }}
