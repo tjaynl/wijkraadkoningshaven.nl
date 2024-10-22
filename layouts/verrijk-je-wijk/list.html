@@ -1,9 +1,12 @@
 {{ define "main" }}
 <section class="[ verrijk-je-wijk ] [ full-width flow ] [ region ]">
-    <h2>{{ .Title }}</h2>
-    {{ .Content }}
+    <div class="narrow">
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
+    </div>
 </section>
-<section class="[ vjw-form ] [ full-width flow ] [ region ]">
+<section id="formulier" class="[ vjw-form ] [ full-width flow ] [ region ]">
+    <h2 class="text--center">Formulier</h2>
     <form target="_blank" action="https://formsubmit.co/vjw@wijkraadkoningshaven.nl" method="POST" class="[ narrow flow ]">
         <input type="hidden" name="_subject" value="Aanvraag: Verrijk je wijk">
         <input type="text" name="_honey" style="display:none">
@@ -86,5 +89,10 @@
         <button class="button" type="submit">Verzend</button>
 
     </form>
+
+    <div class="narrow [ flow ]">
+        <p><em>Een wijk- en dorpsraad stelt eigen voorwaarden voor het soort activiteiten waar u een bijdrage voor kunt aanvragen. Deze voorwaarden kunnen dus per wijk of dorp verschillen.</em></p>
+        <p><em>Hebt u nog bijzondere ideeën die misschien nog uitgewerkt moeten worden neem dan contact op met het bestuur van de Stichting Wijkraad Koningshaven via het <a href="https://wijkraadkoningshaven.nl/contact">contact formulier</a>. In dringende gevallen kunt u ook de WhatsApp +31643933867 gebruiken.</em></p>
+    </div>
 </section>
 {{ end }}

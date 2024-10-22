@@ -1,9 +1,14 @@
 {{ if .enabled }}
-<section class="[ hero ] [ full full-width-split-screen ] []">
-    <div class=" [ flow ]">
-        <h1>{{ .content.title }}</h1>
-        <p>{{ .content.description }}</p>
+<section class="[ hero full-width region ] [] []">
+    <div class="grid-auto-fit">
+        <div>
+            <h2 class="h1">{{ .content.title }}</h2>
+            <p>{{ .content.description }}</p>
+        </div>
+    
+        <div>
+            <img src="{{ .content.image | absURL }}" alt="hero image">
+        </div>
     </div>
-    <img src="{{ .content.image }}" alt="">
 </section>
 {{ end }}

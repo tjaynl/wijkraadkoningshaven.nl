@@ -1,5 +1,5 @@
 ---
-title: About us
+title: Over de stichting
 description: Some description about us
 ---
 De Stichting Wijkraad Koningshaven is op 12 mei 1995 statutair opgericht en ingeschreven bij de Kamer van Koophandel. De Stichting gevestigd in de gemeente Tilburg heeft haar zetel in Wijkcentrum Koningshaven, Kruisvaardersstraat 32D.

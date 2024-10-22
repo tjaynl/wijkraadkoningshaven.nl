@@ -3,15 +3,15 @@
 $active-theme: $light;
 
 
-$global-gap-size: 1em;
-$global-region-spacer: 3.3vmax;
+$global-gap-size: var(--size-s-l);
+$global-region-spacer: var(--size-l-2xl);
 
 // -----------------------------------------------------------------------------
 // Body
 // -----------------------------------------------------------------------------
 
-$body-foreground: var(--neutral-500);
-$body-background: var(--primary-50);
+$body-foreground: var(--neutral-600);
+$body-background: var(--neutral-50);
 $body-font-family: var(--ff-base);
 $body-font-size: var(--fs-400);
 $body-font-weight: var(--fw-regular);
@@ -49,7 +49,7 @@ $split-screen-padding-inline: $page-layout-padding-inline;
 // -----------------------------------------------------------------------------
 
 $site-header-block-padding: var(--size-s);
-$site-header-background: var(--neutral-100);
+$site-header-background: var(--neutral-50);
 
 
 // -----------------------------------------------------------------------------
@@ -83,9 +83,11 @@ $hamburger-line-stroke-width: 6px;
 
 $card-foreground: inherit;
 $card-background: white;
-$card-padding: 1em;
-$card-shadow: none;
+$card-padding: 1em 1.5em;
 $card-border-radius: .75rem;
+
+$card-shadow: var(--shadow-xs);
+$card-shadow-hover: var(--shadow-m);
 
 // -----------------------------------------------------------------------------
 // Button

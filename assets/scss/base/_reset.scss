@@ -44,7 +44,6 @@ dd {
 h1,
 h2,
 h3,
-h4,
 button,
 input,
 label {
@@ -53,16 +52,18 @@ label {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
+    --_text-max-width: var(--text-max-width, 20ch);
+    max-width: var(--_text-max-width);
     font-size: inherit;
     text-wrap: balance;
 }
 
 p,
 li,
-figcaption {
-    --_text-max-width: var(--text-max-width, 75ch);
+figcaption,
+blockquote:not([class]) {
+    --_text-max-width: var(--text-max-width, 65ch);
     max-width: var(--_text-max-width);
     text-wrap: pretty;
 }

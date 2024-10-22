@@ -12,15 +12,19 @@
     --_card-border-radius: var(--card-border-radius, #{$card-border-radius});
 
     display: grid;
-    gap: var(--flow-space);
+    background: var(--_card-background);
     overflow: clip;
     box-shadow: var(--_card-shadow);
     border-radius: var(--_card-border-radius);
 
-    figure,
+    &:is(:hover) {
+        --card-shadow: #{$card-shadow-hover};
+    }
+
     .card__image {
-        border-radius: var(--_card-border-radius);
-        overflow: clip;
+        margin: 0;
+        padding: 0;
+
         img {
             object-fit: cover;
             width: 100%;
@@ -28,8 +32,7 @@
         }
     }
 
-    div,
-    .card__content {
+    .card__body {
         padding: var(--_card-padding);
     }
 }

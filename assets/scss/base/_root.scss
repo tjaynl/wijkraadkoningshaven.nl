@@ -24,4 +24,14 @@
     @each $prop, $value in $sizes {
         --size-#{$prop}: #{$value};
     }
+
+
+    @each $prop, $value in $border-radius-map {
+        --radius-#{$prop}: #{$value};
+    }
+
+
+    @each $prop, $value in $shadows-map {
+        --shadow-#{$prop}: #{$value};
+    }
 }

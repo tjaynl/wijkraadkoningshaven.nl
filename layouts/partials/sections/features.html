@@ -1,24 +1,14 @@
 {{ if .enabled }}
-<section class="[ features ] [ full-width flow ] [ region ]">
-    <div class="narrow text--center">
-        <h2 class="">{{ .content.title }}</h2>
-        <p>{{ .content.description }}</p>
-    </div>
+<section class="[ features ] [ full-width flow ] [ region bg-circle-scatter ]">
     <div class="grid-auto-fit">
-        {{ range .content.features_list }}
+        {{ range .content.list }}
         <div class="card [ bgcolor-neutral-50 ]">
-            <div class="icon">
-                {{ with .Params.image }}
-                    {{ $isSVG := strings.HasSuffix . "svg" }}
-                    {{ if $isSVG }}
-                        {{ $svg := readFile . }}
-                        {{ $svg | safeHTML }}
-                    {{ else }}
-                        <img src="{{ . }}" alt="{{ .title }}" />
-                    {{ end }}
+            <div class="card__body flow">
+                {{ with .image }}
+                <div class="icon">
+                    <img width="96px" src="{{ . | absURL }}" />
+                </div>
                 {{ end }}
-            </div>
-            <div class="card__content flow">
                 <h3>{{ .title }}</h3>
                 <p>{{ .description }}</p>
                 {{ with .link }}

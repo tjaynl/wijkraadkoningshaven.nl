@@ -8,3 +8,14 @@
     grid-template-columns: repeat(auto-fit, minmax(min(var(--_grid-auto-fit-min-col-size), 100%), 1fr));
     gap: var(--_grid-auto-fit-gap);
 }
+
+
+.grid-auto-fit {
+    &[data-cols="two"] {
+        --grid-auto-fit-min-col-size: clamp(16em, 50vw, 26em);
+    }
+
+    &[data-cols="three"] {
+        --grid-auto-fit-min-col-size: clamp(16em, 33%, 20em);
+    }
+}

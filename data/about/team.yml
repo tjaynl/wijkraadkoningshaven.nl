@@ -2,18 +2,18 @@ enabled: true
 id: "team"
 
 content:
-  title: Ons team
-  description: Wij zijn een groep vrijwilligers die samen willen zorgen voor een betere gemeenschap.
-  members_list:
+  title: Team
+  description: description
+  list:
     - name: Joost
-      function: Voorzitter
-      image: images/profile.jpg
+      position: Voorzitter
+      image: images/avatar-male.png
     - name: Anja
-      function: Secretaris
-      image: images/profile.jpg
+      position: Secretaris
+      image: images/avatar-female.png
     - name: Ruud
-      function: Penningmeester
-      image: images/profile.jpg
+      position: Penningmeester
+      image: images/avatar-male.png
     - name: Paul
-      function: Commissielid
-      image: images/profile.jpg
+      position: Commissielid
+      image: images/avatar-male.png

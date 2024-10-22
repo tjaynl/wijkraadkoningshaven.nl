@@ -1,0 +1,113 @@
+local_backend: true
+
+backend:
+  name: "git-gateway"
+  branch: "main"
+  local_backend: true
+
+media_folder: "static/images/uploads" # Media files will be stored here
+public_folder: "/images/uploads" # Public URL for the images
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Images", name: "image", widget: "image", required: false }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    media_folder: ""
+    public_folder: "" 
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { 
+          label: "Images", 
+          name: "images", 
+          widget: "list", 
+          label_singular: "Image",
+          allow_add: true,
+          minimize_collapsed: true,
+          field: { 
+            label: "Image", 
+            name: "image", 
+            widget: "image", 
+            multiple: true,  # Allow bulk upload
+            required: true 
+          } 
+        }
+
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Images", name: "featured_image", widget: "image", required: false }
+      - { label: "Event Date", name: "event_date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Register link", name: "registration_link", widget: "string", required: false }
+
+  
+  - name: "home"
+    label: "Home Page Settings"
+    folder: "data/home"
+    format: "yml"
+    create: false  # No new files, only editing existing ones
+    fields:
+      - label: "Hero Section"
+        name: "hero"
+        file: "hero.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Background Image", name: "background_image", widget: "image" }
+
+      - label: "About Section"
+        name: "about"
+        file: "about.yml"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Content", name: "content", widget: "text" }
+
+      - label: "Features Section"
+        name: "features"
+        file: "features.yml"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Features List", name: "features", widget: "list", 
+              fields: 
+                [
+                  { label: "Feature Title", name: "feature_title", widget: "string" },
+                  { label: "Feature Description", name: "feature_description", widget: "text" }
+                ]
+            }
+
+
+  - name: "about"
+    label: "About Page Settings"
+    folder: "data/about"
+    format: "yml"
+    create: false
+    fields:
+      - label: "Team Section"
+        name: "content.list"
+        file: "team.yml"
+        fields:
+          - { label: "Title", name: "content.title", widget: string }
+          - { label: "Description", name: "content.description", widget: text }

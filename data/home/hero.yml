@@ -2,6 +2,6 @@ enabled: true
 id: "hero"
 
 content:
-  image: images/uploads/dylan-gillis-KdeqA3aTnBY-unsplash.jpg
-  title: "Wij helpen de wijken door ze te verrijken"
-  description: Als een stichting kunnen wij straten, buurten en wijken voorzien van diverse opties om verhoudingen in deze omgevingen verder te verbeteren.
+  image: "images/hero-img2.svg"
+  title: Wijkraad Koningshaven
+  description: De Stichting Wijkraad Koningshaven wordt vaak verward met het Wijkcentrum Koningshaven. De Wijkraad heeft haar zetel in het Wijkcentrum Koningshaven en is partner in het Wijkcentrum. Het Wijkcentrum wordt beheerd door Contour deTwern.

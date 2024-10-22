@@ -1,4 +1,4 @@
 ---
 title: "Gallery"
-description: "Gallery description"
+description: "Bekijk onze galerij met fotos"
 ---

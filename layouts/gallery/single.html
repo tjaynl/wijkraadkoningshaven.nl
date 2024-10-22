@@ -1,18 +1,20 @@
 {{ define "main" }}
-<section class="[ album ] [ full-width ] [ region ]">
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.description }}
-        <p>{{ . }}</p>
-    {{ end }}
+<section class="[ album ] [ full-width ] [ flow region ]">
+    <div class="narrow text--center">
+        <h2>Album: {{ .Title }}</h2>
+        {{ with .Params.description }}
+            <p>{{ . }}</p>
+        {{ end }}
+    </div>
 
     <div id="gallery" class="grid-auto-fit">
         {{ $images := .Resources.ByType "image" }}
         {{ range $images }}
             {{ $thumbnail := .Fill "600x600" }}
             {{ $full := .Resize "1600x" }}
-            <a class="card"
+            <a class="gallery__item lightbox-item" data-type="image"
                href="{{ $full.RelPermalink }}"
-               title="{{ .Title }}">
+               alt="{{ .Title }}">
                 <img src="{{ $thumbnail.RelPermalink }}"
                         alt="{{ .Name }}"
                         width="{{ $thumbnail.Width }}"
